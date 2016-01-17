@@ -1,0 +1,32 @@
+ServerName vagrant.localhost
+NameVirtualHost *:80
+
+<VirtualHost *:80>
+   ServerName vagrant.localhost
+   DocumentRoot /var/www/html
+   <Directory /var/www/html>
+      AllowOverride all
+      EnableMMAP Off
+      EnableSendfile Off
+   </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+   ServerName vagrant.public
+   DocumentRoot /var/www/html/public
+   <Directory /var/www/html/public>
+      AllowOverride all
+      EnableMMAP Off
+      EnableSendfile Off
+   </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+   ServerName vagrant.fuel
+   DocumentRoot /var/www/html/fuel/public
+   <Directory /var/www/html/fuel/public>
+      AllowOverride all
+      EnableMMAP Off
+      EnableSendfile Off
+   </Directory>
+</VirtualHost>
